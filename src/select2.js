@@ -11,7 +11,7 @@ angular.module('ui.select2', []).value('uiSelect2Config', {}).directive('uiSelec
     angular.extend(options, uiSelect2Config);
   }
   return {
-    reCollectionquire: 'ngModel',
+    require: 'ngModel',
     priority: 1,
     compile: function (tElm, tAttrs) {
       var watch,
