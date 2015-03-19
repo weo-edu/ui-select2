@@ -215,7 +215,7 @@ angular.module('ui.select2', []).value('uiSelect2Config', {}).directive('uiSelec
           elm.select2(opts);
 
           // Set initial value - I'm not sure about this but it seems to need to be there
-          elm.select2('data', controller.$modelValue);
+          elm.val(controller.$modelValue);
           // important!
           controller.$render();
 
