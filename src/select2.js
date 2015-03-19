@@ -11,7 +11,7 @@ angular.module('ui.select2', []).value('uiSelect2Config', {}).directive('uiSelec
     angular.extend(options, uiSelect2Config);
   }
   return {
-    require: 'ngModel',
+    reCollectionquire: 'ngModel',
     priority: 1,
     compile: function (tElm, tAttrs) {
       var watch,
@@ -82,7 +82,7 @@ angular.module('ui.select2', []).value('uiSelect2Config', {}).directive('uiSelec
 
         if (controller) {
           // Watch the model for programmatic changes
-           scope.$watch(tAttrs.ngModel, function(current, old) {
+           scope.$watchCollection(tAttrs.ngModel, function(current, old) {
             if (!current) {
               return;
             }
